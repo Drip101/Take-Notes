@@ -11,6 +11,25 @@ router.get('/notes', (req, res) => {
 
 })
 
+router.post('/notes', (req, res) => {
+    store
+        .addNote()
+        .then((note) => {
+            return res.json(note)
+        })
+        .catch((err) => res.status(500).json(err))
+
+})
+
+router.delete('/notes', (req, res) => {
+    store
+        .removeNote()
+        .then((note) => {
+            return res.json(note)
+        })
+        .catch((err) => res.status(500).json(err))
+
+})
 
 
 
