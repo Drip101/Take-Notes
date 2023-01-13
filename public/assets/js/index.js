@@ -13,12 +13,12 @@ if (window.location.pathname === '/notes') {
 }
 
 // Show an element
-const show = (elem) => {
+const show = elem => {
   elem.style.display = 'inline';
 };
 
 // Hide an element
-const hide = (elem) => {
+const hide = elem => {
   elem.style.display = 'none';
 };
 
@@ -33,7 +33,7 @@ const getNotes = () =>
     },
   });
 
-const saveNote = (note) =>
+const saveNote = note =>
   fetch('/api/notes', {
     method: 'POST',
     headers: {
@@ -42,7 +42,7 @@ const saveNote = (note) =>
     body: JSON.stringify(note),
   });
 
-const deleteNote = (id) =>
+const deleteNote = id =>
   fetch(`/api/notes/${id}`, {
     method: 'DELETE',
     headers: {
