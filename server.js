@@ -12,5 +12,5 @@ app.use('/', htmlroutes)
 
 
 app.listen(PORT, function () {
-    console.log(`Listening at https://localhost:${PORT}`)
+    console.log(`Listening at http://localhost:${PORT}`)
 })
